@@ -63,6 +63,10 @@ section {
 }
 
 /* Home Section */
+#home.home {
+    min-height: 80vh; /* or an appropriate value based on your design */
+  }
+  
 .home .image img {
     width: 180px;
     border-radius: 50%;
@@ -102,7 +106,7 @@ section {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
-    background: #5a8dd1;
+    background: #4070a8;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;

@@ -20,28 +20,78 @@
     <link rel="manifest" href="/manifest.json">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Rohan Ramesh Kadukar's portfolio showcasing web development projects, blogs, and contact information.">
-    <meta name="keywords" content="Rohan Kadukar, Rohan Ramesh Kadukar, Rohan, Kadukar, portfolio, web development, programmer, coder, blogs, projects, contact">
+    <meta name="description"
+        content="Rohan Ramesh Kadukar's portfolio showcasing web development projects, blogs, and contact information.">
+    <meta name="keywords"
+        content="Rohan Kadukar, Rohan Ramesh Kadukar, Rohan, Kadukar, portfolio, web development, programmer, coder, blogs, projects, contact">
     <meta name="author" content="Rohan Ramesh Kadukar">
 
     <!-- Open Graph Meta Tags for social media sharing -->
     <meta property="og:title" content="Rohan Ramesh Kadukar - Portfolio">
-    <meta property="og:description" content="Rohan Ramesh Kadukar's portfolio showcasing web development projects, blogs, and contact information.">
-    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5603AQHf0CI5eCdRaA/profile-displayphoto-shrink_400_400/B56ZRlPkSxHQAg-/0/1736865368194?e=1742428800&v=beta&t=mqHn9hM49_IX1oIyulS-Lz-WfGJ8KTXpsVlMVQewlgg">
-    <meta property="og:url" content="https://yourportfolio.com">
+    <meta property="og:description"
+        content="Rohan Ramesh Kadukar's portfolio showcasing web development projects, blogs, and contact information.">
+    <meta property="og:image"
+        content="https://media.licdn.com/dms/image/v2/D5603AQHf0CI5eCdRaA/profile-displayphoto-shrink_400_400/B56ZRlPkSxHQAg-/0/1736865368194?e=1742428800&v=beta&t=mqHn9hM49_IX1oIyulS-Lz-WfGJ8KTXpsVlMVQewlgg">
+    <meta property="og:url" content="https://rohan-kadukar.netlify.app">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rohan Ramesh Kadukar - Portfolio">
-    <meta name="twitter:description" content="Rohan Ramesh Kadukar's portfolio showcasing web development projects, blogs, and contact information.">
-    <meta name="twitter:image" content="https://media.licdn.com/dms/image/v2/D5603AQHf0CI5eCdRaA/profile-displayphoto-shrink_400_400/B56ZRlPkSxHQAg-/0/1736865368194?e=1742428800&v=beta&t=mqHn9hM49_IX1oIyulS-Lz-WfGJ8KTXpsVlMVQewlgg">
-    <meta name="twitter:creator" content="@yourtwitterhandle">
+    <meta name="twitter:description"
+        content="Rohan Ramesh Kadukar's portfolio showcasing web development projects, blogs, and contact information.">
+    <meta name="twitter:image"
+        content="https://media.licdn.com/dms/image/v2/D5603AQHf0CI5eCdRaA/profile-displayphoto-shrink_400_400/B56ZRlPkSxHQAg-/0/1736865368194?e=1742428800&v=beta&t=mqHn9hM49_IX1oIyulS-Lz-WfGJ8KTXpsVlMVQewlgg">
+    <meta name="twitter:creator" content="@rohan-kadukar">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preload" href="/css/poppins.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/poppins.css">
+    </noscript>
+
+    <!-- Bootstrap CSS -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    </noscript>
+
+    <!-- Font Awesome -->
+    <link rel="preload" href="/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/all.min.css">
+    </noscript>
+
+
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0d0d0d;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: #1a1a1a;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #77aaff !important;
+        }
+    </style>
+    <!-- Preload the full stylesheet asynchronously -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+    </noscript>
 </head>
 
 <body>
@@ -57,8 +107,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -85,7 +135,7 @@
     <!-- Home Section -->
     <section id="home" class="home">
         <div class="image">
-            <img src="img/profile.jpg" alt="Rohan Ramesh Kadukar" height="170" width="170">
+            <img src="img/profile.webp" alt="Rohan Ramesh Kadukar" height="170" width="170">
         </div>
         <div class="content">
             <h1>👋 Hi, I am Rohan Ramesh Kadukar</h1>
@@ -103,7 +153,11 @@
             <div class="info-container col-md-12">
                 <div class="details">
                     <h3>👨‍💻 About Me</h3>
-                    <p>Hello! I am <strong>Rohan Ramesh Kadukar</strong>, an aspiring computer science professional with a strong academic background and a passion for technology. Currently pursuing an M.Sc. in Computer Science, I specialize in programming with Java and Python and have experience in web development using Angular, HTML, CSS, and JavaScript. I thrive in solving problems, adapting to challenges, and collaborating with teams to create impactful solutions.</p>
+                    <p>Hello! I am <strong>Rohan Ramesh Kadukar</strong>, an aspiring computer science professional with
+                        a strong academic background and a passion for technology. Currently pursuing an M.Sc. in
+                        Computer Science, I specialize in programming with Java and Python and have experience in web
+                        development using Angular, HTML, CSS, and JavaScript. I thrive in solving problems, adapting to
+                        challenges, and collaborating with teams to create impactful solutions.</p>
                 </div>
             </div>
         </div>
@@ -114,24 +168,27 @@
         <h2 class="heading">My <span>Portfolio</span></h2>
         <div class="box-container">
             <div class="box">
-                <img src="img/cashew-nuts.jpg" alt="Project Image">
+                <img src="img/cashew-nuts.webp" alt="Project Image">
                 <div class="content">
                     <h3>Project: Keshaw Nuts Selling Website (Angular)</h3>
-                    <a href="https://github.com/rohan-kadukar" target="_blank"><i class="bi bi-link-45deg"></i> Git link</a>
+                    <a href="https://github.com/rohan-kadukar" target="_blank"><i class="bi bi-link-45deg"></i> Git
+                        link</a>
                 </div>
             </div>
             <div class="box">
-                <img src="img/grocery.jpg" alt="Project Image">
+                <img src="img/grocery.webp" alt="Project Image">
                 <div class="content">
                     <h3>Project: Grocery Management System (Java Swing)</h3>
-                    <a href="https://github.com/rohan-kadukar" target="_blank"><i class="bi bi-link-45deg"></i> Git link</a>
+                    <a href="https://github.com/rohan-kadukar" target="_blank"><i class="bi bi-link-45deg"></i> Git
+                        link</a>
                 </div>
             </div>
             <div class="box">
-                <img src="img/shopping.jpg" alt="Project Image">
+                <img src="img/shopping.webp" alt="Project Image">
                 <div class="content">
                     <h3>Project: Shopping Website (Java JSP & Servlet)</h3>
-                    <a href="https://github.com/rohan-kadukar" target="_blank"><i class="bi bi-link-45deg"></i> Git link</a>
+                    <a href="https://github.com/rohan-kadukar" target="_blank"><i class="bi bi-link-45deg"></i> Git
+                        link</a>
                 </div>
             </div>
         </div>
@@ -143,7 +200,7 @@
         <div class="box-container">
             <div class="box">
                 <div class="image">
-                    <img src="img/AGI.jpg" alt="Blog Image">
+                    <img src="img/AGI.webp" alt="Blog Image">
                 </div>
                 <div class="content">
                     <div class="icons">
@@ -151,12 +208,13 @@
                         <a href="#"> <i class="fas fa-user"></i> By Rohan </a>
                     </div>
                     <h3>Artificial General Intelligence (AGI)</h3>
-                    <a href="https://rohan-kadukar.blogspot.com/2025/01/understanding-artificial-general.html" class="btn" target="_blank">Explore more <i class="fas fa-link"></i></a>
+                    <a href="https://rohan-kadukar.blogspot.com/2025/01/understanding-artificial-general.html"
+                        class="btn" target="_blank">Explore more <i class="fas fa-link"></i></a>
                 </div>
             </div>
             <div class="box">
                 <div class="image">
-                    <img src="img/cloud.jpeg" alt="Blog Image">
+                    <img src="img/cloud.webp" alt="Blog Image">
                 </div>
                 <div class="content">
                     <div class="icons">
@@ -164,12 +222,13 @@
                         <a href="#"> <i class="fas fa-user"></i> By Rohan </a>
                     </div>
                     <h3>Introduction on Cloud Computing</h3>
-                    <a href="https://rohan-kadukar.blogspot.com/2025/01/introduction-to-cloud-computing.html" class="btn" target="_blank">Explore more <i class="fas fa-link"></i></a>
+                    <a href="https://rohan-kadukar.blogspot.com/2025/01/introduction-to-cloud-computing.html"
+                        class="btn" target="_blank">Explore more <i class="fas fa-link"></i></a>
                 </div>
             </div>
             <div class="box">
                 <div class="image">
-                    <img src="img/devops.jpg" alt="Blog Image">
+                    <img src="img/devops.webp" alt="Blog Image">
                 </div>
                 <div class="content">
                     <div class="icons">
@@ -177,7 +236,8 @@
                         <a href="#"> <i class="fas fa-user"></i> By Rohan </a>
                     </div>
                     <h3>DevOps Best Practices</h3>
-                    <a href="https://rohan-kadukar.blogspot.com/2025/01/devops-best-practices.html" class="btn" target="_blank">Explore more <i class="fas fa-link"></i></a>
+                    <a href="https://rohan-kadukar.blogspot.com/2025/01/devops-best-practices.html" class="btn"
+                        target="_blank">Explore more <i class="fas fa-link"></i></a>
                 </div>
             </div>
         </div>
@@ -189,8 +249,10 @@
         <div class="content">
             <p><strong>Email:</strong> <a href="mailto:rohankadukar12@gmail.com">rohankadukar12@gmail.com</a></p>
             <p><strong>Phone:</strong> +91 7558732173</p>
-            <p><strong>LinkedIn:</strong> <a href="https://in.linkedin.com/in/rohan-kadukar" target="_blank"><i class="fab fa-linkedin"></i> Rohan Kadukar</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/rohan-kadukar" target="_blank"><i class="fab fa-github"></i> Rohan Kadukar</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://in.linkedin.com/in/rohan-kadukar" target="_blank"><i
+                        class="fab fa-linkedin"></i> Rohan Kadukar</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/rohan-kadukar" target="_blank"><i
+                        class="fab fa-github"></i> Rohan Kadukar</a></p>
         </div>
     </section>
 
@@ -198,10 +260,11 @@
         <p>&copy; 2025 Rohan Ramesh Kadukar. All rights reserved.</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    <script src="script.js" defer></script>
+
 </body>
 
 </html>
