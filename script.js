@@ -1,117 +1,83 @@
-// Cache DOM elements
-const navLinks = document.querySelectorAll('.navbar a');
-const sections = document.querySelectorAll('section');
-const preloader = document.getElementById('preloader');
-const canvas = document.getElementById('background-canvas');
-const ctx = canvas.getContext('2d');
+(() => {
+  const navbar = document.querySelector('.navbar'),
+    navLinks = document.querySelectorAll('.navbar a'),
+    sections = document.querySelectorAll('section'),
+    preloader = document.getElementById('preloader'),
+    canvas = document.getElementById('background-canvas'),
+    ctx = canvas.getContext('2d');
+  let particles = [];
 
-let particles = [];
-
-// Smooth scrolling for nav links
-document.addEventListener('DOMContentLoaded', () => {
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+  // Smooth scrolling using event delegation
+  navbar.addEventListener('click', e => {
+    const link = e.target.closest('a');
+    if (link && link.getAttribute('href').startsWith('#')) {
       e.preventDefault();
-      const targetId = e.target.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      window.scrollTo({
-        top: targetSection.offsetTop - 60,
-        behavior: 'smooth'
+      const target = document.getElementById(link.getAttribute('href').slice(1));
+      if (target) {
+        window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+      }
+    }
+  });
+
+  // Hide preloader on window load
+  window.addEventListener('load', () => preloader.style.display = 'none');
+
+  // Canvas setup and particle initialization
+  const resizeCanvas = () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  };
+
+  const initParticles = () => {
+    particles = [];
+    const count = 100;
+    for (let i = 0; i < count; i++) {
+      const r = Math.random() * 3 + 1,
+        x = Math.random() * (canvas.width - 2 * r) + r,
+        y = Math.random() * (canvas.height - 2 * r) + r;
+      particles.push({
+        x, y, r,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2
       });
+    }
+  };
+
+  const animate = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+      // Update position and bounce off edges
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x + p.r > canvas.width || p.x - p.r < 0) p.vx = -p.vx;
+      if (p.y + p.r > canvas.height || p.y - p.r < 0) p.vy = -p.vy;
     });
-  });
-});
+    requestAnimationFrame(animate);
+  };
 
-// Hide preloader on full page load
-window.addEventListener('load', () => {
-  preloader.style.display = 'none';
-});
-
-// Set canvas size
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', () => {
+  // Initialize and handle canvas resize
   resizeCanvas();
-  initParticles(); // Reinitialize particles on resize
-});
-
-// Particle class for canvas animation
-class Particle {
-  constructor(x, y, radius, color) {
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.color = color;
-    this.velocity = {
-      x: (Math.random() - 0.5) * 2,
-      y: (Math.random() - 0.5) * 2
-    };
-  }
-
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    ctx.fillStyle = this.color;
-    ctx.fill();
-    ctx.closePath();
-  }
-
-  update() {
-    this.draw();
-    this.x += this.velocity.x;
-    this.y += this.velocity.y;
-
-    // Bounce particles off the edges
-    if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
-      this.velocity.x = -this.velocity.x;
-    }
-    if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
-      this.velocity.y = -this.velocity.y;
-    }
-  }
-}
-
-// Initialize particles
-function initParticles() {
-  particles = [];
-  const particleCount = 100; // Adjust as needed
-  for (let i = 0; i < particleCount; i++) {
-    const radius = Math.random() * 3 + 1;
-    const x = Math.random() * (canvas.width - radius * 2) + radius;
-    const y = Math.random() * (canvas.height - radius * 2) + radius;
-    particles.push(new Particle(x, y, radius, 'white'));
-  }
-}
-initParticles();
-
-// Animate particles
-function animate() {
-  requestAnimationFrame(animate);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(particle => particle.update());
-}
-animate();
-
-// Active nav link tracking using Intersection Observer
-const observerOptions = {
-  root: null,
-  rootMargin: '0px 0px -60% 0px', // Adjust based on your header height
-  threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute('id');
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href').substring(1) === id);
-      });
-    }
+  initParticles();
+  window.addEventListener('resize', () => {
+    resizeCanvas();
+    initParticles();
   });
-}, observerOptions);
+  animate();
 
-// Observe each section
-sections.forEach(section => observer.observe(section));
+  // Intersection Observer for active nav link highlighting
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href').slice(1) === id);
+        });
+      }
+    });
+  }, { rootMargin: '0px 0px -60% 0px', threshold: 0.1 });
+  sections.forEach(sec => observer.observe(sec));
+})();
