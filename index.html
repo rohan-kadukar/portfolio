@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohan Ramesh Kadukar - Portfolio</title>
 
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="yandex" content="index, follow">
+
     <!-- Favicon -->
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -25,6 +30,8 @@
     <meta name="keywords"
         content="Rohan Kadukar, Rohan Ramesh Kadukar, Rohan, Kadukar, portfolio, web development, programmer, coder, blogs, projects, contact">
     <meta name="author" content="Rohan Ramesh Kadukar">
+    <meta name="copyright" content="rohatech">
+    <meta name="language" content="en">
 
     <!-- Open Graph Meta Tags for social media sharing -->
     <meta property="og:title" content="Rohan Ramesh Kadukar - Portfolio">
@@ -34,6 +41,8 @@
         content="https://media.licdn.com/dms/image/v2/D5603AQHf0CI5eCdRaA/profile-displayphoto-shrink_400_400/B56ZRlPkSxHQAg-/0/1736865368194?e=1742428800&v=beta&t=mqHn9hM49_IX1oIyulS-Lz-WfGJ8KTXpsVlMVQewlgg">
     <meta property="og:url" content="https://rohan-kadukar.netlify.app">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="rohatech">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -44,16 +53,21 @@
         content="https://media.licdn.com/dms/image/v2/D5603AQHf0CI5eCdRaA/profile-displayphoto-shrink_400_400/B56ZRlPkSxHQAg-/0/1736865368194?e=1742428800&v=beta&t=mqHn9hM49_IX1oIyulS-Lz-WfGJ8KTXpsVlMVQewlgg">
     <meta name="twitter:creator" content="@rohan-kadukar">
 
+    <!-- Mobile and App related -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+
     <!-- Google Fonts -->
-    <link rel="preload" href="/css/poppins.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/poppins.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="/css/poppins.css">
     </noscript>
 
     <!-- Bootstrap CSS -->
-    <link rel="preload" href="/css/bootstrap.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="/css/bootstrap.min.css">
     </noscript>
@@ -74,6 +88,10 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         .navbar {
@@ -265,6 +283,56 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
     <script src="script.js" defer></script>
 
+
+    <!-- <script>
+        // Disable right-click (context menu)
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        }, false);
+
+        // Disable key shortcuts for inspect element and view source
+        document.addEventListener("keydown", function (e) {
+            // F12
+            if (e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+I
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+J
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+U
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+                return false;
+            }
+        }, false);
+
+        // Check periodically if developer tools are open (heuristic)
+        setInterval(function () {
+            // A simple check using the difference between outer and inner height (not reliable for all cases)
+            if (window.outerHeight - window.innerHeight > 200) {
+                alert("Developer Tools detected! Please close them.");
+                // Optionally, redirect to another page or take further action
+                window.location.href = "https://www.example.com";
+            }
+        }, 1000);
+
+        document.addEventListener("copy", function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener("dragstart", function (e) {
+            e.preventDefault();
+        });
+
+
+    </script> -->
 </body>
 
 </html>
