@@ -12,20 +12,59 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Rohan Kadukar - Portfolio",
-  description: "Personal portfolio of Rohan Kadukar, showcasing skills, projects, and professional experience in software development and web technologies.",
-  keywords: ["Rohan Kadukar", "Portfolio", "Web Development", "Software Engineer", "Full Stack Developer"],
-  authors: [{ name: "Rohan Kadukar" }],
+  title: 'Rohan Kadukar - Full Stack Developer',
+  description: 'Full Stack Developer specializing in modern web technologies. Check out my portfolio to see my projects and skills.',
+  keywords: 'Full Stack Developer, Web Development, React, Node.js, JavaScript, Portfolio',
+  authors: [{ name: 'Rohan Kadukar' }],
+  creator: 'Rohan Kadukar',
+  publisher: 'Rohan Kadukar',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://rohankadukar.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: "Rohan Kadukar - Portfolio",
-    description: "Personal portfolio showcasing my journey in software development",
-    url: "https://rohan-kadukar.vercel.app",
-    siteName: "Rohan Kadukar Portfolio",
-    locale: "en_US",
-    type: "website",
+    title: 'Rohan Kadukar - Full Stack Developer',
+    description: 'Full Stack Developer specializing in modern web technologies. Check out my portfolio to see my projects and skills.',
+    url: 'https://rohankadukar.com',
+    siteName: 'Rohan Kadukar Portfolio',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Rohan Kadukar Portfolio',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rohan Kadukar - Full Stack Developer',
+    description: 'Full Stack Developer specializing in modern web technologies. Check out my portfolio to see my projects and skills.',
+    images: ['/og-image.jpg'],
+    creator: '@rohankadukar',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   verification: {
-    google: "-gDlR7a8ldFztnPDrpWRm0UAaXT3PkvceNC0P74PodY",
+    google: 'your-google-site-verification',
+    yandex: 'your-yandex-verification',
+    yahoo: 'your-yahoo-verification',
   },
 };
 
