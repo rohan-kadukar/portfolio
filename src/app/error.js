@@ -12,7 +12,7 @@ export default function Error({ error, reset }) {
       <div className="text-6xl mb-4 animate-bounce">😕</div>
       <h1 className="text-4xl font-bold mb-4 text-center">Oops! Something went wrong</h1>
       <p className="text-gray-400 mb-8 text-center max-w-md">
-        Don't worry, it's not you - it's us. Let's try again.
+        {"Don't worry, it's not you - it's us. Let's try again."}
       </p>
       <button
         onClick={reset}
