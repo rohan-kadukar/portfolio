@@ -97,7 +97,7 @@ export default function RootLayout({ children }) {
                 // Create iframe inside container
                 var iframe = document.createElement('iframe');
                 iframe.id = 'abhinav-chatbot-iframe';
-                iframe.src = 'https://personal-chatbot-chi.vercel.app/widget';
+                iframe.src = 'https://personal-chatbot-buddy.vercel.app/widget';
                 chatbox.appendChild(iframe);
                 
                 // Add close button
