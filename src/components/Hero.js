@@ -193,9 +193,9 @@ const Hero = ({ personalData }) => {
                 whileTap={{ scale: 0.9 }}
                 className="text-2xl text-gray-600 dark:text-gray-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors duration-300"
               >
-                {link.icon === 'github' && <FaGithub />}
-                {link.icon === 'linkedin' && <FaLinkedin />}
-                {link.icon === 'email' && <FaEnvelope />}
+                {link.platform === 'GitHub' && <FaGithub />}
+                {link.platform === 'LinkedIn' && <FaLinkedin />}
+                {link.platform === 'Email' && <FaEnvelope />}
               </motion.a>
             ))}
           </motion.div>
