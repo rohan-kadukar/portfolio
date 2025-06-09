@@ -224,6 +224,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}
       >
+        {/* <elevenlabs-convai agent-id="agent_01jx8qt68qe0t9p08r72hy7yjx"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script> */}
         {children}
       </body>
     </html>

@@ -1,4 +1,5 @@
 'use client';
+import Head from 'next/head';
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
@@ -146,7 +147,7 @@ export default function Home() {
     {
       type: 'Internship Offer Letter',
       title: 'Internship Trainee at SparkLab IT Solutions Pvt. Ltd.',
-      imageUrl: '/images/internship.png', // Using placeholder image
+      imageUrl: '/images/Internship.png', // Using placeholder image
       description: 'Selected for an internship position. Period: 01-Jan-2025 to 30-Jun-2025 (approx. 6 months). Responsibilities and projects to be assigned upon joining.',
     },
     // Certificate Data
@@ -174,6 +175,13 @@ export default function Home() {
   ];
 
   return (
+    <>
+    <Head>
+        <meta name="theme-color" content="#1e40af" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/icons/icon-192x192.png" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+      </Head>
     <main className="min-h-screen">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero personalData={personalData} />
@@ -187,5 +195,6 @@ export default function Home() {
       <Footer />
       <ScrollToTopButton />
     </main>
+    </>
   );
 }
