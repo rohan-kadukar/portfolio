@@ -3,9 +3,9 @@
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target": {
         "namespace": "android_app",
-        "package_name": "com.rohankadukar.twa",
+        "package_name": "app.vercel.com.rohankadukar.twa",
         "sha256_cert_fingerprints": [
-          "XX:XX:XX:...:YY"
+          "FB:26:1C:6A:B6:5C:70:6F:E6:E5:5F:D1:48:DE:06:EB:94:CA:63:EE:97:61:F6:FE:CD:3A:E4:EF:8D:B8:39:1A"
         ]
       }
     }
