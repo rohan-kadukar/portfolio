@@ -72,6 +72,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+      <meta name="theme-color" content="#1e40af" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/icons/icon-192x192.png" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        <link rel="apple-touch-icon" href="/icons/icon-512x512.png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/icons/icon-1024x1024.png" sizes="1024x1024" />
       <script
           dangerouslySetInnerHTML={{
             __html: `
