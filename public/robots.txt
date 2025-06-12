@@ -5,7 +5,33 @@ Allow: /
 # Sitemap location
 Sitemap: https://rohankadukar.com/sitemap.xml
 
-# Disallow crawling of specific paths
+# Crawl-delay for all bots
+Crawl-delay: 10
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /static/ 
+
+# Allow specific bots with different rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: YandexBot
+Disallow: / 

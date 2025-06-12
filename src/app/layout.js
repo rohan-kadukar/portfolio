@@ -12,10 +12,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Rohan Kadukar - Full Stack Developer',
-  description: 'Full Stack Developer specializing in modern web technologies. Check out my portfolio to see my projects and skills.',
-  keywords: 'Full Stack Developer, Web Development, React, Node.js, JavaScript, Portfolio',
-  authors: [{ name: 'Rohan Kadukar' }],
+  title: 'Rohan Kadukar - Full Stack Developer | Modern Web Solutions',
+  description: 'Full Stack Developer specializing in React, Next.js, and Node.js. Building performant, scalable web applications with modern technologies. View my portfolio of projects and technical expertise.',
+  keywords: 'Full Stack Developer, Web Development, React, Next.js, Node.js, JavaScript, TypeScript, Portfolio, Web Applications, Software Engineer, Frontend Developer, Backend Developer',
+  authors: [{ name: 'Rohan Kadukar', url: 'https://rohankadukar.com' }],
   creator: 'Rohan Kadukar',
   publisher: 'Rohan Kadukar',
   formatDetection: {
@@ -28,8 +28,8 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Rohan Kadukar - Full Stack Developer',
-    description: 'Full Stack Developer specializing in modern web technologies. Check out my portfolio to see my projects and skills.',
+    title: 'Rohan Kadukar - Full Stack Developer | Modern Web Solutions',
+    description: 'Full Stack Developer specializing in React, Next.js, and Node.js. Building performant, scalable web applications with modern technologies.',
     url: 'https://rohankadukar.com',
     siteName: 'Rohan Kadukar Portfolio',
     images: [
@@ -37,7 +37,7 @@ export const metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Rohan Kadukar Portfolio',
+        alt: 'Rohan Kadukar - Full Stack Developer Portfolio',
       },
     ],
     locale: 'en_US',
@@ -45,10 +45,11 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rohan Kadukar - Full Stack Developer',
-    description: 'Full Stack Developer specializing in modern web technologies. Check out my portfolio to see my projects and skills.',
+    title: 'Rohan Kadukar - Full Stack Developer | Modern Web Solutions',
+    description: 'Full Stack Developer specializing in React, Next.js, and Node.js. Building performant, scalable web applications with modern technologies.',
     images: ['/og-image.jpg'],
     creator: '@rohankadukar',
+    site: '@rohankadukar',
   },
   robots: {
     index: true,
@@ -59,6 +60,7 @@ export const metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
+      'notranslate': true,
     },
   },
   verification: {
@@ -66,6 +68,18 @@ export const metadata = {
     yandex: 'your-yandex-verification',
     yahoo: 'your-yahoo-verification',
   },
+  category: 'technology',
+  classification: 'Portfolio',
+  referrer: 'origin-when-cross-origin',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#111827' },
+  ],
 };
 
 export default function RootLayout({ children }) {
