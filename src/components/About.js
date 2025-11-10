@@ -88,14 +88,16 @@ const About = ({ personalData }) => {
                   {personalData.email || 'rohankadukar12@gmail.com'}
                 </a>
               </motion.li>
+              {personalData.phone && (
               <motion.li 
                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200"
                 whileHover={{ x: 10 }}>
                 <FaPhone className="w-5 h-5 text-blue-500" />
                 <a href={`tel:${personalData.phone || '+917558732173'}`} className="hover:text-blue-500 transition-colors duration-200">
-                  {personalData.phone || '+91 7558732173'}
+                  {personalData.phone || '+91 1234567890'}
                 </a>
               </motion.li>
+              )}
               <motion.li 
                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200"
                 whileHover={{ x: 10 }}>

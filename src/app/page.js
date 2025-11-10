@@ -42,10 +42,10 @@ export default function Home() {
   const personalData = {
     name: "Rohan Ramesh Kadukar",
     email: "rohankadukar12@gmail.com",
-    phone: "+91 7558732173",
+    // phone: "+91 7558732173",
     linkedin: "https://in.linkedin.com/in/rohan-kadukar",
     github: "https://github.com/rohan-kadukar",
-    careerObjective: "Aspiring computer science professional seeking to leverage technical skills and project experience in a dynamic organization to drive growth and innovation.",
+    careerObjective: `Build what users love and systems trust—blazing-fast React/Next.js up front, secure Node/Express + MySQL (Sequelize) at the core. Own the outcome: lead end-to-end when scale matters, or go UI-first to win Web Vitals, accessibility, and conversions—so the product ships faster, breaks less, and grows on purpose.`,
     dateOfBirth: "March 10, 2003",
     languages: ["Marathi", "Hindi", "English"],
     profileImage: "/images/demoPic.png",
@@ -73,13 +73,13 @@ export default function Home() {
       degree: "M.Sc. in Computer Science",
       institution: "Modern College, Ganeshkhind | SPPU",
       period: "2023 - 2025",
-      percentage: "81.09%"
+      percentage: "9.05"
     },
     {
       degree: "B.Sc. in Computer Science",
       institution: "Shivraj College, Gadhinglaj | Shivaji University",
       period: "2021 - 2023",
-      percentage: "82.36%"
+      percentage: "9.14"
     },
     {
       degree: "H.S.C. (12th Grade)",
@@ -96,51 +96,72 @@ export default function Home() {
   ];
 
   const skillsData = {
-    programmingLanguages: ["Java", "Python"],
-    webTechnologies: ["HTML", "CSS", "JavaScript", "Angular", "React", "Next.js", "TypeScript", "Bootstrap", "Tailwind CSS"],
-    tools: ["Git", "Eclipse", "Visual Studio Code"],
+    programmingLanguages: ["JavaScript", "TypeScript", "Java", "Python"],
+    webTechnologies: ["HTML", "CSS", "React", "Next.js", "Bootstrap", "Tailwind CSS", "Angular"],
+    tools: ["Git", "Visual Studio Code", "Postman", "MySQL Workbench", "Vercel"],
     professionalSkills: ["Team Collaboration", "Effective Communication", "Problem-Solving", "Adaptability", "Time Management"]
-  };
+};
+
 
   const projectsData = [
-    {
-      title: "Keshaw Nuts Selling Website",
-      technologies: ["Angular", "Typescript", "Firebase"],
-      description: "Developed a dynamic e-commerce platform for selling nuts, featuring user authentication, product listings, and a shopping cart.",
-      link: "#", // Add actual link if available
-      repoLink: "https://github.com/rohan-kadukar/"
-    },
-    {
-      title: "Grocery Management System",
-      technologies: ["Java Swing", "MySQL"],
-      description: "Created a desktop application to manage grocery inventory, including functionalities for stock tracking, billing, and reporting.",
-      link: "#",
-      repoLink: "https://github.com/rohan-kadukar/"
-    },
-    {
-      title: "Shopping Website",
-      technologies: ["Java JSP & Servlet", "MySQL"],
-      description: "Built an online shopping portal with features like product browsing, user registration, and order management.",
-      link: "#",
-      repoLink: "https://github.com/rohan-kadukar/"
-    },
-    {
-      title: "Abhinav Academy Website (Internship Project)",
-      technologies: ["Next.js", "Tailwind CSS", "Javascript"],
-      description: "Developed the official website for Abhinav Academy during an internship. Includes an integrated chatbot.",
-      link: "https://abhinavedu.org",
-      liveLink: "https://abhinavedu.org",
-      repoLink: "https://github.com/rohan-kadukar/"
-    },
-    {
-      title: "Abhinav Academy Chatbot",
-      technologies: ["Next.js", "Tailwind CSS", "Gemini API"],
-      description: "A chatbot integrated into the Abhinav Academy website, utilizing the Gemini API for responses. (Developed during internship)",
-      link: "https://abhinav-chatbot.vercel.app/", // Or specific link to chatbot if different
-      liveLink: "https://abhinav-chatbot.vercel.app/",
-      repoLink: "https://github.com/rohan-kadukar/",
-    }
-  ];
+  {
+    title: "Abhinav Academy Website",
+    technologies: ["Next.js", "Tailwind CSS", "Laravel API"],
+    description: "Production education site with SEO-first pages, optimized images, and clean API integrations.",
+    link: "https://abhinavedu.org",
+    liveLink: "https://abhinavedu.org",
+    // repoLink: "#"
+  },
+  {
+    title: "AI Chatbot Widgets",
+    technologies: ["React", "Tailwind CSS", "Google Gemini API"],
+    description: "Embeddable chatbot widget with async load, theme config, and JSON-driven answers for site-specific knowledge.",
+    link: "https://personal-chatbot-buddy.vercel.app/widget",
+    liveLink: "https://personal-chatbot-buddy.vercel.app/widget",
+    repoLink: "https://github.com/rohan-kadukar/personal-chatbot"
+  },
+  {
+    title: "Employee Field Management Dashboard",
+    technologies: ["React", "TypeScript", "Bootstrap"],
+    description: "Role-based admin UI with sortable/filterable tables, mobile-first cards, and clear status indicators.",
+    link: "https://chikode-demo.rohatech.site/",
+    liveLink: "https://chikode-demo.rohatech.site/",
+    // repoLink: "#"
+  },
+  {
+    title: "CRM System",
+    technologies: ["React", "TypeScript", "Node.js", "Express", "MySQL"],
+    description: "Leads pipeline, filtering, exports, and role-based access backed by REST APIs and a normalized schema.",
+    link: "https://crm-codeexpert.vercel.app/",
+    liveLink: "https://crm-codeexpert.vercel.app/",
+    // repoLink: "#"
+  },
+  {
+    title: "Real-Time Chat Application",
+    technologies: ["React", "Node.js", "Express", "Socket.IO", "MySQL", "Sequelize"],
+    description: "Group chat with credential/token login, group/member management, pin/unpin, typing and read states.",
+    // link: "#",
+    // liveLink: "#",
+    // repoLink: "#"
+  },
+  {
+    title: "Portfolio Website",
+    technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+    description: "Personal portfolio with responsive UI, case studies, and performance-focused build.",
+    link: "https://www.rohatech.site/",
+    liveLink: "https://www.rohatech.site/",
+    repoLink: "https://github.com/rohan-kadukar/portfolio"
+  },
+  {
+    title: "Seturo",
+    technologies: ["Next.js", "Tailwind CSS"],
+    description: "In-progress product space for internal demos and validation.",
+    link: "https://seturo.rohatech.site/",
+    liveLink: "https://seturo.rohatech.site/",
+    repoLink: "https://github.com/rohan-kadukar/seturo"
+  },
+];
+
 
   const experienceItems = [
     // Internship Data
@@ -165,13 +186,13 @@ export default function Home() {
       imageUrl: "/images/Angular.jpg", // Using placeholder image
       certificateUrl: "https://udemy-certificate.s3.amazonaws.com/image/UC-e9334c06-1570-47ca-9696-7290065b82dd.jpg"
     },
-    {
-      type: 'Certificate',
-      title: "DevOps Beginners to Advanced with Projects",
-      issuer: "Udemy",
-      imageUrl: "/images/DevOps.jpg", // Using placeholder image
-      certificateUrl: "https://udemy-certificate.s3.amazonaws.com/image/UC-411cdf5f-5669-4d09-9df7-d8953e482917.jpg"
-    },
+    // {
+    //   type: 'Certificate',
+    //   title: "DevOps Beginners to Advanced with Projects",
+    //   issuer: "Udemy",
+    //   imageUrl: "/images/DevOps.jpg", // Using placeholder image
+    //   certificateUrl: "https://udemy-certificate.s3.amazonaws.com/image/UC-411cdf5f-5669-4d09-9df7-d8953e482917.jpg"
+    // },
   ];
 
   return (

@@ -16,7 +16,7 @@ const BlogPost = ({ title, content, thumbnail, publishedDate, url }) => (
     className="group relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-emerald-200 dark:hover:border-emerald-700"
   >
     {/* Gradient overlay for thumbnail */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-5"></div>
     
     {thumbnail && (
       <div className="relative w-full h-56 overflow-hidden">
@@ -49,12 +49,12 @@ const BlogPost = ({ title, content, thumbnail, publishedDate, url }) => (
         {content}
       </p>
       
-      <div className="flex justify-between items-center pt-4 border-t border-gray-100 dark:border-gray-700">
+      <div className="flex justify-between items-center pt-4 border-t border-gray-100 dark:border-gray-700 relative z-20">
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-medium transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-semibold transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg px-4 py-3 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/30 pointer-events-auto relative z-30 border border-emerald-200 dark:border-emerald-700 hover:border-emerald-300 dark:hover:border-emerald-600"
         >
           Read More
           <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -186,16 +186,20 @@ const Blog = () => {
           </motion.div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <BlogPost
-                key={post.id}
-                title={post.title}
-                content={post.content.replace(/<[^>]*>/g, '').substring(0, 200) + '...'}
-                thumbnail={post.images?.[0]?.url}
-                publishedDate={post.published}
-                url={post.url}
-              />
-            ))}
+            {posts.map((post) => {
+              console.log('Post URL:', post.url); // Debug: Check the URL format
+              const cleanContent = post.content ? post.content.replace(/<[^>]*>/g, '').substring(0, 200) + '...' : 'No content available';
+              return (
+                <BlogPost
+                  key={post.id}
+                  title={post.title}
+                  content={cleanContent}
+                  thumbnail={post.images?.[0]?.url}
+                  publishedDate={post.published}
+                  url={post.url || '#'}
+                />
+              );
+            })}
           </div>
         )}
 
