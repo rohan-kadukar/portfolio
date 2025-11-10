@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -246,6 +247,7 @@ export default function RootLayout({ children }) {
       >
         {/* <elevenlabs-convai agent-id="agent_01jx8qt68qe0t9p08r72hy7yjx"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script> */}
         {children}
+        <Analytics />
       </body>
     </html>
   );
